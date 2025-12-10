@@ -10,7 +10,7 @@ Written in desperation due to the current status of modern build systems.
 
 ## [tenc32](https://github.com/corvid3/tenc32)
 *Emulator for a fake CPU architecture*  
-TODO
+`tenc32` is an attempt to build a functioning CPU emulator from scratch, with its own unique RISC design and customizable memory based I/O. Memory segmentation and paging are both supported by the MMU, and a reliable PIC is implemented to allow external software to interface with the CPU without having to poll.
 The reference tenc32 implementation is designed as a library, therefore a framework executable must be written to use the CPU. A [simple executable](https://github.com/corvid3/tenc32_runner) is provided.  
 #- (NOTE: tenc32 was originally called `crowcpu`, any references to `crowcpu` should be interpreted as tenc32 and vice-versa)
 
@@ -19,17 +19,13 @@ The reference tenc32 implementation is designed as a library, therefore a framew
 With a CPU emulator comes with the need to have the ability to write software for it. 
 An assembler and linker targeting POFF[^1] is provided for basic low level software development.
 A work-in-progress C compiler aiming for C23 compliance is projected to reach MVP within a few weeks as of writing.
-* [ccc-assembler]()
-* [ccc-linker]()
-* [ccc-cc]()
-
-## [tenc32 software]()
-*Things to run on the emulator*  
-TODO
+* [ccc-assembler](https://github.com/corvid3/tenc32_asm)
+* [ccc-linker](https://github.com/corvid3/tenc32_ld)
+* [ccc-cc](https://github.com/corvid3/srcc) (NOT WORKING)
 
 ## [brbt](https://github.com/corvid3/brbt)
 *Bounded red black tree library*  
-Left-leaning red black tree implementation in C. Implementation based off of Robert Sedgwick's seminal paper. API is designed to be simplistic to use, whilst also providing deep control over how memory is allocated. 
+Left-leaning red-black tree implementation in C. Implementation based off of Robert Sedgwick's [seminal paper](https://sedgewick.io/wp-content/themes/sedgewick/papers/2008LLRB.pdf) on left-leaning red-black trees. API is designed to be simplistic to use, whilst also providing deep control over how memory is allocated. 
 A cache replacement policy hook is also provided, so that fixed-capacity caches can be implemented using the library.
 
 # parser libraries
@@ -42,7 +38,7 @@ Defined file structure allows the SCL parser to automatically serialize and dese
 Written out of desperation trying to find a configuration standard that wasn't miserable to implement.
 
 ## [jayson](https://github.com/corvid3/jayson)
-*JSON (de)serialization*
+*JSON (de)serialization*  
 `jayson` is a CXX library that implements a non-strictly conforming implementation of a JSON serializer/deserializer. 
 
 ## [terse](https://github.com/corvid3/terse)
@@ -54,5 +50,5 @@ Written out of desperation trying to find a configuration standard that wasn't m
 `lexible` is a CXX library that provides tools to create a lexer and parser in CXX. 
 Interfacing with lexbile happens mostly through the type system, using templated data structures to generate a backtracking recursive descent parser at runtime.
 
-[^1]: "Passerine Object File Format"
+[^1]: "[Passerine Object File Format](https://github.com/corvid3/POFF_c)"
 [^2]: Specification can be found in the root directory of the SCL repository
