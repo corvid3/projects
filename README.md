@@ -21,7 +21,7 @@ An assembler and linker targeting POFF[^1] is provided for basic low level softw
 A work-in-progress C compiler aiming for C23 compliance is projected to reach MVP within a few weeks as of writing.
 * [ccc-assembler](https://github.com/corvid3/tenc32_asm)
 * [ccc-linker](https://github.com/corvid3/tenc32_ld)
-* [ccc-cc](https://github.com/corvid3/srcc) (NOT WORKING)
+* [ccc-cc](https://github.com/corvid3/srcc)
 
 ## [brbt](https://github.com/corvid3/brbt)
 *Bounded red black tree library*  
