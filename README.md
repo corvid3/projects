@@ -18,10 +18,13 @@ The reference tenc32 implementation is designed as a library, therefore a framew
 *tenc32 development environment*  
 With a CPU emulator comes with the need to have the ability to write software for it. 
 An assembler and linker targeting POFF[^1] is provided for basic low level software development.
-A work-in-progress C compiler aiming for C23 compliance is projected to reach MVP within a few weeks as of writing.
+A work-in-progress C compiler aiming for C23 compliance is in the works.
 * [ccc-assembler](https://github.com/corvid3/tenc32_asm)
 * [ccc-linker](https://github.com/corvid3/tenc32_ld)
-* [ccc-cc](https://github.com/corvid3/srcc)
+
+## [tenc32 bios](https://github.com/corvid3/tenc32_bios)
+*tenc32 runtime environment*  
+A forth based operating system written in assembly, developed to speed up prototyping & experimentation whilst a C compiler is in development. Implemented as an indirectly threaded compiler, and is fully functional & turing complete (if lacking in extra utilities).
 
 ## [brbt](https://github.com/corvid3/brbt)
 *Bounded red black tree library*  
